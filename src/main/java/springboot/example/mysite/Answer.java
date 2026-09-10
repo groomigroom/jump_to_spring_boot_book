@@ -23,6 +23,7 @@ public class Answer {
 //    private String subject;
 
     @Column(name = "groomigroom",columnDefinition = "TEXT")
+    //컬럼 이름과 columnDefinition은 sql 문구를 직접 작성하는 거
     private String content;
 
     @Column(name = "goooroooorom")
