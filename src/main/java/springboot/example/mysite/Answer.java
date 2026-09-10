@@ -30,5 +30,6 @@ public class Answer {
     private LocalDateTime createDate;
 
     @ManyToOne
+    //데이터베이스 설계에서 가장 흔하게 발생하는 "여러 개가 하나를 참조하는 구조"를 나타냅니다.
     private Question question;
 }
