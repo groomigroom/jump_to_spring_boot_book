@@ -16,6 +16,7 @@ public class Answer {
     @Id
     //primary key에 매핑되는 거
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //GenerationType.IDENTITY (가장 많이 사용) * 의미: 기본키 생성을 데이터베이스에 위임합니다. * 특징: MySQL의 AUTO_INCREMENT 처럼 데이터가 비어있는 상태로 저장(insert)되면 DB가 알아서 순차적인 번호를 부여합니다.
     private Integer id;
 
 //    @Column(name = "groomgroom", length = 200)
