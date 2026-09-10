@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RequestMapping("/answer")
 @RequiredArgsConstructor
+//클래스 내부에 final이나 @NonNull이 붙은 필드를 모아 생성자를 자동으로 만드는 거
 @Controller
 public class AnswerController {
 
