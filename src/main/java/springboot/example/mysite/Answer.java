@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 //db의 테이블과 연결하는 거
 public class Answer {
     @Id
+    //primary key에 매핑되는 거
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
