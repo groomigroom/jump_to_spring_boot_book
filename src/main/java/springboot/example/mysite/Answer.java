@@ -7,8 +7,9 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 
 @Getter
-//get 매세드 자동 생성
+//get 메서드 자동 생성
 @Setter
+//set 메서드 자동 생성
 @Entity
 public class Answer {
     @Id
