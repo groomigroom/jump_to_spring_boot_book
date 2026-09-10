@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 //set 메서드 자동 생성
 @Entity
+//db의 테이블과 연결하는 거
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
