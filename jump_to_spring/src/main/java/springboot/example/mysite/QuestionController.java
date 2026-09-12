@@ -26,7 +26,8 @@ public class QuestionController {
 
     @GetMapping(value = "/detail/{id}")
     public String detail(Model model, @PathVariable("id") Integer id, AnswerForm answerForm) {
-        //컨트롤러(Controller)에서 만든 데이터를 화면(View)으로 보내는 전달 매개체
+        //Model은 컨트롤러(Controller)에서 만든 데이터를 화면(View)으로 보내는 전달 매개체
+        //스프링 부트(Spring Boot)에서 @PathVariable은 URL 경로(Path)에 포함된 동적인 값을 자바 메서드의 매개변수(파라미터)로 추출할 때 사용하는 어노테이션입니다. [1] RESTful API를 설계할 때 특정 리소스를 식별하기 위한 식별자(ID 등)를 URL에 자연스럽게 녹여내기 위해 자주 사용됩니다.
         Question question = this.questionService.getQuestion(id);
 
         String renderedMarkdown = this.commonUtil.markdown(question.getContent());
