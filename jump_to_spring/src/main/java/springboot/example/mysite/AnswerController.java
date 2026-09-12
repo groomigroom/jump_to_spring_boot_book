@@ -74,6 +74,7 @@ public class AnswerController {
         }
         this.answerService.delete(answer);
         return String.format("redirect:/question/detail/%s", answer.getQuestion().getId());
+        //String.format()은 지정한 양식(포맷)에 맞춰 문자열을 동적으로 생성하는 자바의 표준 메서드입니다.
     }
 
     @PreAuthorize("isAuthenticated()")
