@@ -81,6 +81,7 @@ public class QuestionController {
                                  Principal principal, @PathVariable("id") Integer id) {
         //자바 스프링 부트에서 @Valid는 데이터 유효성 검증(Validation)을 자동으로 수행하라는 지시어입니다. 클래스 필드에 선언된 @NotNull, @Min, @Email 등의 제약 조건을 검증합니다.
         if (bindingResult.hasErrors()) {
+            //BindingResult는 데이터 검증(Validation) 및 바인딩의 결과를 담는 인터페이스입니다. hasErrors()는 에러가 있는지 확인
             return "questionForm";
         }
         Question question = this.questionService.getQuestion(id);
