@@ -9,6 +9,7 @@
                 <div th:if="${question.modifyDate != null}" class="badge bg-light text-dark p-2 text-start mx-3">
                     <div class="mb-2">modified at</div>
                     <div th:text="${#temporals.format(question.modifyDate, 'yyyy-MM-dd HH:mm')}"></div>
+                    <!--#temporals.format()은 자바 8의 새로운 날짜/시간 객체(예: LocalDate, LocalDateTime)를 웹 화면에 원하는 형식(포맷)으로 예쁘게 출력할 때 사용하는 유틸리티 메서드입니다.-->
                 </div>
                 <div class="badge bg-light text-dark p-2 text-start">
                     <div class="mb-2">
