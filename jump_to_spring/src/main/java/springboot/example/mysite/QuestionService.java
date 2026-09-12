@@ -67,6 +67,7 @@ public class QuestionService {
         Pageable pageable = PageRequest.of(page, 10, Sort.by(sorts));
         //Pageable 페이징을 처리하는 인터페이스이다.
         //PageRequest 현재 페이지와 한 페이지에 보여 줄 게시물 개수 등을 설정하여 페이징 요청을 하는 클래스이다.
+        //PageRequest.of(page, 10)에서 page는 조회할 페이지의 번호이고 10은 한 페이지에 보여 줄 게시물의 개수를 의미한다.
         Specification<Question> spec = search(kw);
         return this.questionRepository.findAll(spec, pageable);
     }
