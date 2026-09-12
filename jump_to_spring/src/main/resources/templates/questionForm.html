@@ -5,6 +5,7 @@
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <div th:replace="~{form_errors :: formErrorsFragment}"></div>
         <!-- th:replace는 웹 페이지의 공통 레이아웃(헤더, 푸터, 네비게이션 바 등)을 재사용하기 위해 특정 태그를 미리 만들어둔 템플릿(조각)으로 '통째로 교체'하는 속성입니다. -->
+        <!-- 'form_errors.html 파일에 작성되어 있는 formErrorsFragment라는 이름의 템플릿 조각(Fragment)을 지정하는 문법'입니다. -->
         <div class="mb-3">
             <label for="subject" class="form-label">제목</label>
             <input type="text" th:field="*{subject}" class="form-control">
