@@ -22,6 +22,7 @@
         </thead>
         <tbody>
         <tr class="text-center" th:each="question, loop : ${paging}">
+            <!-- question에는 현재 반복 순서에 해당하는 Question 엔티티(또는 DTO) 객체 하나가 담깁니다. -->
             <td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"></td>
             <td class="text-start">
                 <!-- | 는 파이프 -->
