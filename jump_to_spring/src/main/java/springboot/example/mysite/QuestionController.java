@@ -32,6 +32,7 @@ public class QuestionController {
         String renderedMarkdown = this.commonUtil.markdown(question.getContent());
 
         model.addAttribute("question", question);
+        //addAttribute("키", 값)의 의미이다.
         model.addAttribute("renderedContent", renderedMarkdown);
         return "qeustionDetail";
     }
