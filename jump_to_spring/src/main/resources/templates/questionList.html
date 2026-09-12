@@ -22,7 +22,8 @@
         </thead>
         <tbody>
         <tr class="text-center" th:each="question, loop : ${paging}">
-            <!-- question에는 현재 반복 순서에 해당하는 Question 엔티티(또는 DTO) 객체 하나가 담깁니다. -->
+            <!-- question에는 현재 반복 순서에 해당하는 Question 엔티티(또는 DTO) 객체 하나가 담깁니다. 
+            loop에는 타임리프가 제공하는 루프의 상태 정보(Loop Status Object)가 담깁니다. 현재 몇 번째 반복인지, 처음인지 마지막인지 등의 메타데이터를 확인할 수 있어 주로 번호 출력이나 조건부 스타일에 사용됩니다. -->
             <td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"></td>
             <td class="text-start">
                 <!-- | 는 파이프 -->
