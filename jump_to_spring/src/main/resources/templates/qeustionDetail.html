@@ -76,6 +76,7 @@
     <!-- 답변 반복 끝  -->
     <!-- 답변 작성 -->
     <form th:action="@{|/answer/create/${question.id}|}" th:object="${answerForm}" method="post" class="my-3">
+        <!-- th:object는 HTML Form 태그 안에서 사용할 '기준 객체(Model Object)'를 지정하는 속성입니다. -->
         <div th:replace="~{form_errors :: formErrorsFragment}"></div>
         <textarea sec:authorize="isAnonymous()" disabled th:field="*{content}" class="form-control" rows="10"></textarea>
         <textarea sec:authorize="isAuthenticated()" th:field="*{content}" class="form-control" rows="10"></textarea>
