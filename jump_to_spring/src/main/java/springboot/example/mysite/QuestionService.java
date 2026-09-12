@@ -45,8 +45,8 @@ public class QuestionService {
     public Question getQuestion(Integer id) {
         Optional<Question> question = this.questionRepository.findById(id);
         if (question.isPresent()) {
+            //Optional 객체 내부에 값이 존재하는지 여부를 확인하는 메서드입니다.
             return question.get();
-            //https://wikidocs.net/161302
         } else {
             throw new DataNotFoundException("질문이 안 찾아집니다.");
         }
