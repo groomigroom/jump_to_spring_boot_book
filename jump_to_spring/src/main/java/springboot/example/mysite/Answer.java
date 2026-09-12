@@ -39,5 +39,6 @@ public class Answer {
     private LocalDateTime modifyDate;
 
     @ManyToMany
+    //여러개에서 여러개 연결
     Set<SiteUser> voter;
 }
