@@ -15,5 +15,6 @@ public class MainController {
     @GetMapping("/")
     public String root() {
         return "redirect:/question/list";
+        //즉시 /question/list url로 이동하라고 하는거
     }
 }
