@@ -26,6 +26,7 @@ public class QuestionController {
 
     @GetMapping(value = "/detail/{id}")
     public String detail(Model model, @PathVariable("id") Integer id, AnswerForm answerForm) {
+        //컨트롤러(Controller)에서 만든 데이터를 화면(View)으로 보내는 전달 매개체
         Question question = this.questionService.getQuestion(id);
 
         String renderedMarkdown = this.commonUtil.markdown(question.getContent());
