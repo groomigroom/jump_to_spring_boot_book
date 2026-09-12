@@ -15,5 +15,6 @@ public interface QuestionRepository extends JpaRepository<Question, Integer> {
     Page<Question> findAll(Pageable pageable);
     Page<Question> findAll(Specification<Question> spec, Pageable pageable);
     //Page 페이징을 위한 클래스이다.
+    //Pageable 페이징을 처리하는 인터페이스이다.
 }
 
