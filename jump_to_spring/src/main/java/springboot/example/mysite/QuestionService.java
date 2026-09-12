@@ -16,6 +16,7 @@ import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
+//controller와 repository를 연결해 주는 거
 public class QuestionService {
     private final QuestionRepository questionRepository;
 
