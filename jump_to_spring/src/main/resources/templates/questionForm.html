@@ -7,6 +7,7 @@
         <div class="mb-3">
             <label for="subject" class="form-label">제목</label>
             <input type="text" th:field="*{subject}" class="form-control">
+            <!-- th:field="*{title}"이라고 작성하면 렌더링될 때 id="title", name="title"이 자동으로 붙습니다.-->
         </div>
         <div class="mb-3">
             <label for="content" class="form-label">내용</label>
