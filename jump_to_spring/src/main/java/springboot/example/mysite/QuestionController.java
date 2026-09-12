@@ -57,6 +57,7 @@ public class QuestionController {
 
     @GetMapping("/list")
     public String list(Model model, @RequestParam(value="page", defaultValue="0") int page, @RequestParam(value = "kw", defaultValue = "") String kw) {
+        //http://localhost:8080/question/list?page=0 과 같은 방식으로 요청하기 위해서 int page에 @RequestParam이 사용됨
         Page<Question> paging = this.questionService.getList(page, kw);
         model.addAttribute("paging", paging);
         model.addAttribute("kw", kw);
