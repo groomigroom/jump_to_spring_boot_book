@@ -79,6 +79,7 @@ public class QuestionController {
     @PostMapping("/modify/{id}")
     public String questionModify(@Valid QuestionForm questionForm, BindingResult bindingResult,
                                  Principal principal, @PathVariable("id") Integer id) {
+        //자바 스프링 부트에서 @Valid는 데이터 유효성 검증(Validation)을 자동으로 수행하라는 지시어입니다. 클래스 필드에 선언된 @NotNull, @Min, @Email 등의 제약 조건을 검증합니다.
         if (bindingResult.hasErrors()) {
             return "questionForm";
         }
