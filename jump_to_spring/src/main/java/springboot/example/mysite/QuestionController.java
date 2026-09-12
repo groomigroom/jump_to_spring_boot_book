@@ -16,6 +16,7 @@ import java.util.List;
 
 @RequestMapping("/question")
 @RequiredArgsConstructor
+//자바 롬복(Lombok)의 @RequiredArgsConstructor는 클래스 내부에 final이나 @NonNull이 붙은 필드를 모아 생성자를 자동으로 만들어주는 어노테이션입니다. 
 @Controller
 public class QuestionController {
 
