@@ -1,4 +1,5 @@
 <div th:fragment="formErrorsFragment" class="alert alert-danger"
      role="alert" th:if="${#fields.hasAnyErrors()}">
+     <!-- th:fragment는 다른 HTML 파일에서 재사용할 수 있도록 '이 태그 영역을 하나의 템플릿 조각(Fragment)으로 정의하겠다'고 선언하는 속성입니다. -->
     <div th:each="err : ${#fields.allErrors()}" th:text="${err}" />
 </div>
