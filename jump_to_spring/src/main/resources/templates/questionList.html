@@ -24,6 +24,7 @@
         <tr class="text-center" th:each="question, loop : ${paging}">
             <td th:text="${paging.getTotalElements - (paging.number * paging.size) - loop.index}"></td>
             <td class="text-start">
+                <!-- | 는 파이프 -->
                 <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.subject}"></a>
                 <span class="text-danger small ms-2" th:if="${#lists.size(question.answerList) > 0}"
                       th:text="${#lists.size(question.answerList)}">
