@@ -41,7 +41,7 @@ public class SecurityConfig {
                         .addHeaderWriter(new XFrameOptionsHeaderWriter(
                                 XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN)))
                 //.headers(...)역할: HTTP 응답 헤더(Response Headers)와 관련된 보안 설정을 시작하는 메서드입니다.
-            
+                //addHeaderWriter(...)는 HTTP 응답 헤더에 개발자가 원하는 커스텀 헤더 작성기(HeaderWriter)를 직접 추가하는 메서드입니다.
                 .formLogin((formLogin) -> formLogin
                         .loginPage("/user/login")
                         .defaultSuccessUrl("/"))
