@@ -31,6 +31,7 @@ public class UserController {
             bindingResult.rejectValue("password2", "passwordInCorrect",
                     "2개의 패스워드가 일치하지 않습니다.");
             //"네가 보낸 이 객체 안에서, 내가 지정한 [특정 필드의 값]은 유효하지 않으니 검증 탈락(Reject)이야!" 라고 스프링 시스템에 공식적으로 등록하는 행위를 의미합니다.
+            //bindingResult.rejectValue(필드명, 오류 코드, 오류 메시지)
             return "signup_form";
         }
 
