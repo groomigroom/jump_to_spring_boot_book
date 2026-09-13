@@ -48,6 +48,9 @@ public class SecurityConfig {
                 .formLogin((formLogin) -> formLogin
                         .loginPage("/user/login")
                         .defaultSuccessUrl("/"))
+                //.formLogin 메서드는 스프링 시큐리티의 로그인 설정을 담당하는 부분
+                //로그인 페이지의 URL은 /user/login이고
+                //로그인 성공 시에 이동할 페이지는 루트 URL(/)임을 의미한다
                 .logout((logout) -> logout
                         .logoutRequestMatcher(PathPatternRequestMatcher.pathPattern(HttpMethod.GET, "/user/logout"))
                         .logoutSuccessUrl("/")
