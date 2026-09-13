@@ -39,6 +39,7 @@ public class UserController {
             userService.create(userCreateForm.getUsername(),
                     userCreateForm.getEmail(), userCreateForm.getPassword1());
         }catch(DataIntegrityViolationException e) {
+            //DataIntegrityViolationException은 "데이터 무결성 제약 조건(Data Integrity Constraint)을 위반했다"는 것을 의미합니다.
             e.printStackTrace();
             bindingResult.reject("signupFailed", "이미 등록된 사용자입니다.");
             return "signup_form";
