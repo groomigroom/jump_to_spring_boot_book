@@ -17,6 +17,7 @@ import org.springframework.security.web.servlet.util.matcher.PathPatternRequestM
 @Configuration
 //@Configuration은 이 파일이 스프링부트의 환경 설정 파일임을 의미하는 애너테이션이다.
 @EnableWebSecurity
+//스프링 부트에서 @EnableWebSecurity는 웹 보안 기능(Spring Security)을 활성화하고, 개발자가 커스텀한 보안 설정(인증, 인가 등)을 애플리케이션에 적용하도록 알리는 애노테이션입니다. 필요한 스타터 의존성과 핵심 의미를 정리해 드립니다.
 @EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
