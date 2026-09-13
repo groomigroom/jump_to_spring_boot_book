@@ -24,6 +24,7 @@ public class SecurityConfig {
     @Bean
     //@Bean은 스프링에 의해 생성 또는 관리되는 객체를 의미
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        //SecurityFilterChain은 스프링 부트에서 웹 보안(인증 및 인가)을 처리하는 핵심 필터들의 집합을 의미합니다.
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
                         // AntPathRequestMatcher 대신 일반 문자열로 경로를 지정합니다.
