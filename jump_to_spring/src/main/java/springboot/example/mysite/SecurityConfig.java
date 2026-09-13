@@ -43,6 +43,8 @@ public class SecurityConfig {
                 //.headers(...)역할: HTTP 응답 헤더(Response Headers)와 관련된 보안 설정을 시작하는 메서드입니다.
                 //addHeaderWriter(...)는 HTTP 응답 헤더에 개발자가 원하는 커스텀 헤더 작성기(HeaderWriter)를 직접 추가하는 메서드입니다.
                 //XFrameOptionsHeaderWriter(...)는 HTTP 응답 헤더에 X-Frame-Options 문구를 자동으로 작성해 주는 클래스를 생성합니다.
+                //XFrameOptionsMode를 X-Frame-Options 헤더의 값을 SAMEORIGIN으로 지정하는 열거형(Enum) 상수입니다. 
+                //SAMEORIGIN은 "도메인이 같은(동일한 출처의) 페이지 내에서만 우리 웹페이지를 iframe으로 넣을 수 있다"는 뜻입니다. 예를 들어 내 사이트 주소가 example.com이라면, ://example.com 안에서는 ://example.com를 iframe으로 띄울 수 있지만, 해커의 사이트인 hacker.com에서는 내 사이트를 iframe으로 띄울 수 없게 차단합니다.
                 .formLogin((formLogin) -> formLogin
                         .loginPage("/user/login")
                         .defaultSuccessUrl("/"))
