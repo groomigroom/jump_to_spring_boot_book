@@ -18,6 +18,7 @@ public enum UserRole {
     UserRole(String value) {
         this.value = value;
     }
+    //ADMIN("ROLE_ADMIN")처럼 괄호 안에 넣은 문자열("ROLE_ADMIN")이 생성자의 매파라미터인 value로 전달되고, 이 값이 아래에 선언된 private String value; 변수에 저장되도록 연결해 주는 다리 역할을 합니다.
 
     private String value;
 }
