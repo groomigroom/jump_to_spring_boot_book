@@ -22,6 +22,7 @@ public class UserSecurityService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        //UserDetails는 Spring Security가 사용자의 핵심 정보를 담기 위해 제공하는 핵심 인터페이스(Interface)입니다. [1, 2] 
         Optional<SiteUser> _siteUser = this.userRepository.findByusername(username);
         if (_siteUser.isEmpty()) {
             throw new UsernameNotFoundException("사용자를 찾을수 없습니다.");
