@@ -39,5 +39,6 @@ public class UserSecurityService implements UserDetailsService {
             authorities.add(new SimpleGrantedAuthority(UserRole.USER.getValue()));
         }
         return new User(siteUser.getUsername(), siteUser.getPassword(), authorities);
+        //User는 로그인 인증용 사용자 정보(UserDetails)의 기본 구현체 클래스"를 가져오겠다는 의미입니다.
     }
 }
