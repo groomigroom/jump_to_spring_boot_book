@@ -68,6 +68,8 @@ public class SecurityConfig {
 
     @Bean
     AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
+        //AuthenticationManager는 Spring Security에서 사용자의 인증(Authentication) 처리를 총괄하는 가장 핵심적인 컨트롤러 인터페이스입니다.
+        
         return authenticationConfiguration.getAuthenticationManager();
     }
 }
