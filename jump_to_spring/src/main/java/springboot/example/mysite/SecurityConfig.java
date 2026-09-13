@@ -44,6 +44,7 @@ public class SecurityConfig {
     @Bean
     PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+        //BCryptPasswordEncoder는 해시 암호화하는거
     }
 
     @Bean
