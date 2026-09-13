@@ -36,6 +36,7 @@ public class SecurityConfig {
                 .csrf((csrf) -> csrf
                         .ignoringRequestMatchers("/h2-console/**"))
                 //.csrf (Cross-Site Request Forgery)개념: 사용자가 의도하지 않게 공격자가 지정한 행동(예: 비밀번호 변경, 결제 요청 등)을 신뢰하는 웹사이트에 요청하게 만드는 '사이트 간 요청 위조' 공격을 의미합니다.
+                //.ignoringRequestMatchers()는 "내가 지정한 특정 URL 경로들에 대해서는 보안 검사(또는 특정 보안 기능)를 적용하지 않고 건너뛰겠다(Ignore)"는 의미를 가집니다.
                 .headers((headers) -> headers
                         .addHeaderWriter(new XFrameOptionsHeaderWriter(
                                 XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN)))
