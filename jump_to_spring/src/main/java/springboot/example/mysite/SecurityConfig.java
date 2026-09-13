@@ -32,6 +32,7 @@ public class SecurityConfig {
                         // AntPathRequestMatcher 대신 일반 문자열로 경로를 지정합니다.
                         .requestMatchers("/**").permitAll())
                         //RequestMatchers는 Spring Security에서 "들어오는 HTTP 요청(URL, HTTP 메서드 등)이 내가 지정한 특정 조건과 일치하는지 검사하는 인터페이스"입니다.
+                        //.permitAll()의미: "권한을 모두에게 허용한다"는 뜻입니다.
                 .csrf((csrf) -> csrf
                         .ignoringRequestMatchers("/h2-console/**"))
                 .headers((headers) -> headers
