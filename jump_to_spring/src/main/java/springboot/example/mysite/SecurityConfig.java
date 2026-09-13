@@ -15,6 +15,7 @@ import org.springframework.security.web.header.writers.frameoptions.XFrameOption
 import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 
 @Configuration
+//@Configuration은 이 파일이 스프링부트의 환경 설정 파일임을 의미하는 애너테이션이다.
 @EnableWebSecurity
 @EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
