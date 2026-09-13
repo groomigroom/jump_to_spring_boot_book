@@ -9,7 +9,12 @@ public enum UserRole {
     USER("ROLE_USER");
     //ADMIN: 관리자 권한을 대표하는 이름입니다. 실제 매핑된 텍스트는 "ROLE_ADMIN"입니다.
     //USER: 일반 사용자 권한을 대표하는 이름입니다. 실제 매핑된 텍스트는 "ROLE_USER"입니다.
-
+    /*
+    왜 "ROLE_"로 시작하나요? 스프링 시큐리티(Spring Security)의 전통적인 규칙 때문입니다. 
+    스프링 시큐리티에서 권한을 검사할 때(예: hasRole("ADMIN")) 기본적으로 접두사로 
+    "ROLE_"이 붙어있는지 확인하므로, 이에 맞춰 값을 저장해 둔 것입니다.
+    */
+    
     UserRole(String value) {
         this.value = value;
     }
