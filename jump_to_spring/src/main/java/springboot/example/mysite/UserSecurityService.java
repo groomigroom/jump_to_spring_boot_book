@@ -16,6 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class UserSecurityService implements UserDetailsService {
+    //UserDetailsService는 "로그인할 때 입력한 아이디(username)를 가지고 회원 정보를 데이터베이스(DB)에서 찾아오는 인터페이스"
 
     private final UserRepository userRepository;
 
