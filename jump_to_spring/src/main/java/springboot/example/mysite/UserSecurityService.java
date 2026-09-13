@@ -34,6 +34,7 @@ public class UserSecurityService implements UserDetailsService {
         List<GrantedAuthority> authorities = new ArrayList<>();
         if ("admin".equals(username)) {
             authorities.add(new SimpleGrantedAuthority(UserRole.ADMIN.getValue()));
+            //SimpleGrantedAuthority는 "사용자에게 부여된 권한(Authority)을 문자열 형태로 단순하게 표현하는 클래스"입니다.
         } else {
             authorities.add(new SimpleGrantedAuthority(UserRole.USER.getValue()));
         }
