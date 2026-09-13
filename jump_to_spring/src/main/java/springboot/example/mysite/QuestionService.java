@@ -64,6 +64,7 @@ public class QuestionService {
     public Page<Question> getList(int page, String kw) {
         List<Sort.Order> sorts = new ArrayList<>();
         sorts.add(Sort.Order.desc("createDate"));
+        //Question에 정의된 createDate를 불러옴
         Pageable pageable = PageRequest.of(page, 10, Sort.by(sorts));
         //Pageable 페이징을 처리하는 인터페이스이다.
         //PageRequest 현재 페이지와 한 페이지에 보여 줄 게시물 개수 등을 설정하여 페이징 요청을 하는 클래스이다.
