@@ -28,6 +28,7 @@ public class SecurityConfig {
         //HttpSecurity는 스프링 시큐리티에서 웹 기반 보안 설정을 구성하는 핵심 빌더 클래스입니다.
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
+                        //authorizeHttpRequests는 HTTP 요청들에 대한 URL별 접근 권한(인가, Authorization) 설정을 시작하겠다는 선언입니다.
                         // AntPathRequestMatcher 대신 일반 문자열로 경로를 지정합니다.
                         .requestMatchers("/**").permitAll())
                 .csrf((csrf) -> csrf
