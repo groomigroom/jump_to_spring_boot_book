@@ -6,6 +6,7 @@ import org.commonmark.renderer.html.HtmlRenderer;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Component는 개발자가 작성한 클래스를 스프링 컨테이너에 빈(Bean)으로 자동 등록하라고 알려주는 자바 애노테이션입니다.
 public class CommonUtil {
     public String markdown(String markdown) {
         Parser parser = Parser.builder().build();
