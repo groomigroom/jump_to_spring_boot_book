@@ -3,6 +3,7 @@
     <h5 class="my-3 border-bottom pb-2">답변 수정</h5>
     <form th:object="${answerForm}" method="post">
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <!-- _csrf.parameterName 의 의미 역할: 서버(스프링 시큐리티)가 CSRF 토큰을 식별하기 위해 기대하는 HTML input 태그의 name 속성값입니다. -->
         <div th:replace="~{form_errors :: formErrorsFragment}"></div>
         <div class="mb-3">
             <label for="content" class="form-label">내용</label>
