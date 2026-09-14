@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class CommonUtil {
     public String markdown(String markdown) {
         Parser parser = Parser.builder().build();
+        //commonmark-java가 제공하는 구문 분석기(Parser) 클래스
         Node document = parser.parse(markdown);
         HtmlRenderer renderer = HtmlRenderer.builder().build();
         return renderer.render(document);
