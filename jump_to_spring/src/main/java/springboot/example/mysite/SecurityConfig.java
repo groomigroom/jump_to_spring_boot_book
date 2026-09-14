@@ -71,5 +71,6 @@ public class SecurityConfig {
         //AuthenticationManager는 Spring Security에서 사용자의 인증(Authentication) 처리를 총괄하는 가장 핵심적인 컨트롤러 인터페이스입니다.
         //AuthenticationConfiguration은 "스프링 시큐리티의 인증 프로세스를 총괄하는 핵심 관리자(AuthenticationManager)를 쉽게 생성하고 가져올 수 있도록 도와주는 설정 클래스"
         return authenticationConfiguration.getAuthenticationManager();
+        //.getAuthenticationManager()는 사용자의 인증(Authentication) 처리를 총괄하는 핵심 인터페이스인 AuthenticationManager를 가져오는 메서드이며, 이는 spring-boot-starter-security 의존성에 속해 있습니다.
     }
 }
