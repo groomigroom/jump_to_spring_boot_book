@@ -90,6 +90,7 @@
 <script layout:fragment="script" type='text/javascript'>
     const delete_elements = document.getElementsByClassName("delete");
     Array.from(delete_elements).forEach(function(element) {
+        //Array.from(delete_elements)는 "유사 배열 객체나 반복 가능한 객체인 delete_elements를 진짜 배열(Array)로 변환하겠다"는 의미입니다. 
         element.addEventListener('click', function() {
             if(confirm("정말로 삭제하시겠습니까?")) {
                 location.href = this.dataset.uri;
