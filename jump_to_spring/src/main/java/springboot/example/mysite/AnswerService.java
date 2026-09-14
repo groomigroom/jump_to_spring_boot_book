@@ -26,6 +26,7 @@ public class AnswerService {
     public Answer getAnswer(Integer id) {
         Optional<Answer> answer = this.answerRepository.findById(id);
         if (answer.isPresent()) {
+            //isPresent() : 데이터가 있으면 true, 없으면 false
             return answer.get();
         } else {
             throw new DataNotFoundException("answer not found");
