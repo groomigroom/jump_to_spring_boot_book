@@ -17,5 +17,6 @@ public class CommonUtil {
         HtmlRenderer renderer = HtmlRenderer.builder().build();
         //HtmlRenderer는 마크다운 구조(Node 트리)를 웹 브라우저가 읽을 수 있는 HTML 태그 문자열로 최종 변환(렌더링)해 주는 출력기 클래스입니다.
         return renderer.render(document);
+        //renderer.render() Node 트리를 순수한 HTML 문자열로 최종 출력
     }
 }
