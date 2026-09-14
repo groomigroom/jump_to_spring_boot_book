@@ -28,6 +28,7 @@ public class AnswerController {
     public String createAnswer(Model model, @PathVariable("id") Integer id,
                                @Valid AnswerForm answerForm, BindingResult bindingResult, Principal principal) {
         //Principal은 "현재 로그인(인증)된 사용자의 정보를 담고 있는 자바의 표준 인터페이스"입니다.
+        //@Valid는 데이터 유효성 검증(Validation)을 자동으로 수행하라는 지시어입니다. 제약 조건 확인: 클래스 필드에 선언된 @NotNull, @Min, @Email 등의 제약 조건을 검증합니다.
         Question question = this.questionService.getQuestion(id);
         SiteUser siteUser = this.userService.getUser(principal.getName());
         if (bindingResult.hasErrors()) {
