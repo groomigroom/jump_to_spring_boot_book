@@ -24,6 +24,7 @@ public class QuestionService {
         //Specification은 데이터베이스의 데이터를 조회할 때, 복잡한 검색 조건(쿼리 조건)을 자바 코드로 안전하고 유연하게 조립할 수 있도록 도와주는 인터페이스입니다.
         return new Specification<>() {
             private static final long serialVersionUID = 1L;
+            //#####
             @Override
             public Predicate toPredicate(Root<Question> q, CriteriaQuery<?> query, CriteriaBuilder cb) {
                 query.distinct(true);  // 중복을 제거
