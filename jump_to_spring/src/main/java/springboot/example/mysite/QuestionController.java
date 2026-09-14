@@ -71,6 +71,7 @@ public class QuestionController {
         Question question = this.questionService.getQuestion(id);
         if(!question.getAuthor().getUsername().equals(principal.getName())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "수정권한이 없습니다.");
+            //ResponseStatusException은 "개발자가 원하는 특정 HTTP 상태 코드(Status Code)와 에러 메시지를 클라이언트에게 가장 쉽고 빠르게 반환하기 위해 사용하는 예외 클래스"입니다. 
         }
         questionForm.setSubject(question.getSubject());
         questionForm.setContent(question.getContent());
