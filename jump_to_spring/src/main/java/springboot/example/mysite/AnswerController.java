@@ -27,6 +27,7 @@ public class AnswerController {
     @PostMapping("/create/{id}")
     public String createAnswer(Model model, @PathVariable("id") Integer id,
                                @Valid AnswerForm answerForm, BindingResult bindingResult, Principal principal) {
+        //Principal은 "현재 로그인(인증)된 사용자의 정보를 담고 있는 자바의 표준 인터페이스"입니다.
         Question question = this.questionService.getQuestion(id);
         SiteUser siteUser = this.userService.getUser(principal.getName());
         if (bindingResult.hasErrors()) {
