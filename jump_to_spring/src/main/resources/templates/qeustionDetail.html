@@ -21,6 +21,7 @@
             <div class="my-3">
                 <a href="javascript:void(0);" class="recommend btn btn-sm btn-outline-secondary"
                    th:data-uri="@{|/question/vote/${question.id}|}">
+                    <!-- href="javascript:void(0);"는 사실 타임리프(Thymeleaf) 전용 문법이 아니라 순수 자바스크립트(JavaScript)와 HTML 문법입니다. 타임리프 템플릿 안에서 이 코드가 사용되는 이유는 "이 링크( 태그)를 클릭했을 때, 페이지를 이동하거나 새로고침하지 말고 아무 일도 일어나지 않게 하라"는 뜻입니다. -->
                     추천
                     <span class="badge rounded-pill bg-success" th:text="${#lists.size(question.voter)}"></span>
                     <!--size는 list의 길이-->
