@@ -38,6 +38,7 @@ public class QuestionController {
         return "qeustionDetail";
     }
     @PreAuthorize("isAuthenticated()")
+    //@PreAuthorize("isAuthenticated()")는 "이 메서드(또는 컨트롤러)는 로그인한(인증된) 사용자만 호출할 수 있게 하라"는 의미입니다. 
     @GetMapping("/create")
     public String questionCreate(QuestionForm questionForm) {
         return "questionForm";
