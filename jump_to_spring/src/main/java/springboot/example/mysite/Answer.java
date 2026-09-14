@@ -41,4 +41,5 @@ public class Answer {
     @ManyToMany
     //여러개에서 여러개 연결
     Set<SiteUser> voter;
+    //Set 객체는 값의 컬렉션입니다. Set의 값은 한 번만 나타날 수 있으며, Set의 컬렉션에서는 고유한 값입니다. 집합 느낌
 }
