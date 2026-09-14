@@ -5,7 +5,7 @@
     <div class="card my-3">
         <div class="card-body">
             <div class="card-text" th:utext="${renderedContent}"></div>
-            <!-- th:utext는 html 텍스트 그대로 담는거 -->
+            <!-- th:utext는 html 텍스트 그대로 담는거 th:utext는 태그를 이스케이프하지 않고 실제 HTML 태그로 해석하여 반영합니다. -->
             <div class="d-flex justify-content-end">
                 <div th:if="${question.modifyDate != null}" class="badge bg-light text-dark p-2 text-start mx-3">
                     <div class="mb-2">modified at</div>
