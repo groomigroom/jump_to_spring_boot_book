@@ -19,6 +19,7 @@ import org.springframework.security.web.servlet.util.matcher.PathPatternRequestM
 @EnableWebSecurity
 //스프링 부트에서 @EnableWebSecurity는 웹 보안 기능(Spring Security)을 활성화하고, 개발자가 커스텀한 보안 설정(인증, 인가 등)을 애플리케이션에 적용하도록 알리는 애노테이션입니다. 필요한 스타터 의존성과 핵심 의미를 정리해 드립니다.
 @EnableMethodSecurity(prePostEnabled = true)
+//@EnableMethodSecurity(prePostEnabled = true)는 "메서드 수준에서 권한 검사를 할 수 있도록 스프링 시큐리티 기능을 활성화하겠다"는 의미입니다.
 public class SecurityConfig {
 
     @Bean
