@@ -5,6 +5,7 @@
     <div class="card my-3">
         <div class="card-body">
             <div class="card-text" th:utext="${renderedContent}"></div>
+            <!-- th:utext는 html 텍스트 그대로 담는거 -->
             <div class="d-flex justify-content-end">
                 <div th:if="${question.modifyDate != null}" class="badge bg-light text-dark p-2 text-start mx-3">
                     <div class="mb-2">modified at</div>
