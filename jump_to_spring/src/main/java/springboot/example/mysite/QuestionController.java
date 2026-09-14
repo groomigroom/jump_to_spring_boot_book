@@ -93,7 +93,8 @@ public class QuestionController {
         if (!question.getAuthor().getUsername().equals(principal.getName())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "수정권한이 없습니다.");
             //스프링 부트에서 ResponseStatusException은 "개발자가 원하는 특정 HTTP 상태 코드(Status Code)와 에러 메시지를 클라이언트에게 가장 쉽고 빠르게 반환하기 위해 사용하는 예외 클래스"입니다. 
-            //
+            //HttpStatus는 HTTP 요청에 대한 서버의 응답 상태를 나타내는 'HTTP 상태 코드'들을 모아둔 자바의 열거형(Enum) 클래스
+            //BAD_REQUEST는 잘못된 요청의 의미 400
         }
         this.questionService.modify(question, questionForm.getSubject(), questionForm.getContent());
         return String.format("redirect:/question/detail/%s", id);
