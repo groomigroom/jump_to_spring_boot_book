@@ -60,7 +60,7 @@ public class SecurityConfig {
                 //PathPatternRequestMatcher.pathPattern(...): 스프링 부트에서 경로를 매칭할 때 쓰는 고성능 경로 매칭 방식입니다.
                 //HttpMethod.GET: 로그아웃 요청을 GET 방식으로 받겠다고 명시합니다.
                 //.logoutSuccessUrl("/")역할: 로그아웃이 성공적으로 완료된 후 사용자를 이동시킬(리다이렉트) URL 주소를 지정합니다.
-                
+                //.invalidateHttpSession(true)역할: 사용자가 로그아웃할 때 서버에 저장된 해당 유저의 HTTP 세션(Session)을 완전히 무효화(삭제)할지 여부를 설정합니다.
         ;
         return http.build();
         //.build()는 "지금까지 채워 넣은 설정 데이터를 바탕으로, 최종적으로 사용할 실제 객체를 완성해서 만들어내라"는 명령입니다. 이는 자바 디자인 패턴 중 하나인 빌더 패턴(Builder Pattern)의 마지막 단계에 해당하는 메서드입니다.
