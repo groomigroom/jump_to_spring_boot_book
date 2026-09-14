@@ -29,6 +29,7 @@
                    sec:authorize="isAuthenticated()"
                    th:if="${question.author != null and #authentication.getPrincipal().getUsername() == question.author.username}"
                    th:text="수정"></a>
+                <!-- #authentication.getPrincipal().getUsername() == question.author.username을 적용했다. #authentication.getPrincipal()은 타임리프에서 스프링 시큐리티와 함께 사용하는 표현식으로, 이를 통해 현재 사용자가 인증되었다면 사용자 이름(사용자 ID)을 알 수 있다. 만약 로그인한 사용자와 글쓴이가 다르다면 이 [수정] 버튼은 보이지 않을 것. -->
                 <a href="javascript:void(0);" th:data-uri="@{|/question/delete/${question.id}|}"
                    class="delete btn btn-sm btn-outline-secondary" sec:authorize="isAuthenticated()"
                    th:if="${question.author != null and #authentication.getPrincipal().getUsername() == question.author.username}"
