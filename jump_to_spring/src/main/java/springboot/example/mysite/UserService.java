@@ -19,6 +19,7 @@ public class UserService {
         user.setUsername(username);
         user.setEmail(email);
         user.setPassword(passwordEncoder.encode(password));
+        //PasswordEncoder는 사용자의 비밀번호를 안전하게 단방향 암호화(해시)하고, 입력된 비밀번호가 저장된 암호와 일치하는지 검증하는 데 사용하는 인터페이스입니다.
         this.userRepository.save(user);
         return user;
     }
