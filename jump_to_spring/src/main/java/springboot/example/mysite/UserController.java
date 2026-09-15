@@ -23,6 +23,7 @@ public class UserController {
 
     @PostMapping("/signup")
     public String signup(@Valid UserCreateForm userCreateForm, BindingResult bindingResult) {
+        //BindingResult는 데이터 검증(Validation) 및 바인딩의 결과를 담는 인터페이스입니다.
         if (bindingResult.hasErrors()) {
             return "signup_form";
         }
