@@ -51,6 +51,7 @@ public class UserController {
         }catch(Exception e) {
             e.printStackTrace();
             bindingResult.reject("signupFailed", e.getMessage());
+            //getMessage() 발생한 예외 내부에 저장된 구체적인 에러 원인 메시지를 반환합니다.
             return "signup_form";
         }
 
