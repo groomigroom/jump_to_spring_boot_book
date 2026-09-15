@@ -46,6 +46,7 @@ public class UserController {
             //e.printStackTrace();는 "에러가 발생한 지점과 그 지점까지의 메서드 호출 흐름(Stack Trace)을 콘솔(표준 에러 스트림, System.err)에 그대로 출력하라"는 의미입니다.
             //이거 금기 코드이니 정리해 놓은거 참고하기
             bindingResult.reject("signupFailed", "이미 등록된 사용자입니다.");
+            //bindingResult.reject()는 특정 필드를 지정하지 않고, 객체 전체의 유효성이 깨졌을 때 사용합니다.
             return "signup_form";
         }catch(Exception e) {
             e.printStackTrace();
